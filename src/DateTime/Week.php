@@ -9,13 +9,8 @@ namespace TiagoSampaio\DateTime;
  *
  * @package TiagoSampaio\DateTime
  */
-class Week
+class Week extends DateTimeAbstract
 {
-    /**
-     * @var string
-     */
-    const DEFAULT_FORMAT = 'Y-m-d H:i:s';
-
     /**
      * @var int
      */
@@ -149,33 +144,5 @@ class Week
     public static function getDayOfWeek($datetime = null)
     {
         return date('N', self::getDatetime($datetime));
-    }
-
-    /**
-     * @param null|string|int|\DateTime $datetime
-     *
-     * @return int|null
-     */
-    private static function getDatetime($datetime = null)
-    {
-        if (null === $datetime) {
-            return self::getCurrentTimestamp();
-        }
-
-        if ($datetime instanceof \DateTime) {
-            $datetime = (string) $datetime->format(self::DEFAULT_FORMAT);
-        }
-
-        $datetime = strtotime($datetime);
-
-        return $datetime;
-    }
-
-    /**
-     * @return int
-     */
-    private static function getCurrentTimestamp()
-    {
-        return time();
     }
 }
