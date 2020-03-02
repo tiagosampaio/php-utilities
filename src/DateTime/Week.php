@@ -58,7 +58,7 @@ class Week
      */
     public static function isWeekend($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) >= 6);
+        return (self::getDayOfWeek($datetime) >= 6);
     }
 
     /**
@@ -78,7 +78,7 @@ class Week
      */
     public static function isMonday($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) == self::DAY_OF_WEEK_MONDAY);
+        return (self::getDayOfWeek($datetime) == self::DAY_OF_WEEK_MONDAY);
     }
 
     /**
@@ -88,7 +88,7 @@ class Week
      */
     public static function isTuesday($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) == self::DAY_OF_WEEK_TUESDAY);
+        return (self::getDayOfWeek($datetime) == self::DAY_OF_WEEK_TUESDAY);
     }
 
     /**
@@ -98,7 +98,7 @@ class Week
      */
     public static function isWednesday($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) == self::DAY_OF_WEEK_WEDNESDAY);
+        return (self::getDayOfWeek($datetime) == self::DAY_OF_WEEK_WEDNESDAY);
     }
 
     /**
@@ -108,7 +108,7 @@ class Week
      */
     public static function isThursday($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) == self::DAY_OF_WEEK_THURSDAY);
+        return (self::getDayOfWeek($datetime) == self::DAY_OF_WEEK_THURSDAY);
     }
 
     /**
@@ -118,7 +118,7 @@ class Week
      */
     public static function isFriday($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) == self::DAY_OF_WEEK_FRIDAY);
+        return (self::getDayOfWeek($datetime) == self::DAY_OF_WEEK_FRIDAY);
     }
 
     /**
@@ -128,7 +128,7 @@ class Week
      */
     public static function isSaturday($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) == self::DAY_OF_WEEK_SATURDAY);
+        return (self::getDayOfWeek($datetime) == self::DAY_OF_WEEK_SATURDAY);
     }
 
     /**
@@ -138,7 +138,7 @@ class Week
      */
     public static function isSunday($datetime = null)
     {
-        return (self::getDatOfWeek($datetime) == self::DAY_OF_WEEK_SUNDAY);
+        return (self::getDayOfWeek($datetime) == self::DAY_OF_WEEK_SUNDAY);
     }
 
     /**
@@ -146,7 +146,7 @@ class Week
      *
      * @return false|string
      */
-    private static function getDatOfWeek($datetime = null)
+    public static function getDayOfWeek($datetime = null)
     {
         return date('N', self::getDatetime($datetime));
     }
