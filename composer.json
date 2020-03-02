@@ -1,5 +1,5 @@
 {
-    "name": "tiagosampaio/utilities",
+    "name": "tiagosampaio/php-utilities",
     "description": "An utility library for ease the development.",
     "type": "library",
     "keywords": ["sdk", "utilities"],
