@@ -20,7 +20,6 @@ class OnlyNumbersTest extends TestCase
     public function format()
     {
         $text = ' !1@2#3$4%5ˆ&6*7(8)9_0abcde ';
-        $this->assertIsNumeric(OnlyNumbers::format($text));
         $this->assertEquals(1234567890, OnlyNumbers::format($text));
     }
 }
