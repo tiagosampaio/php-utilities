@@ -31,7 +31,9 @@ class DateTimeAbstract
             $datetime = (string) $datetime->format(self::DEFAULT_FORMAT);
         }
 
-        $datetime = strtotime($datetime);
+        if (is_string($datetime)) {
+            $datetime = strtotime($datetime);
+        }
 
         return $datetime;
     }
