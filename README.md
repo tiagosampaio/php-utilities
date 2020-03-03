@@ -11,6 +11,6 @@
 
 The recommended way to install is via Composer:
 
-```
+```bash
 composer require tiagosampaio/php-utilities
 ```
