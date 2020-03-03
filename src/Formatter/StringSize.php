@@ -19,7 +19,8 @@ class StringSize
      *
      * @return string
      */
-    public static function format(string $value, int $length, string $string, int $type = STR_PAD_RIGHT) : string {
+    public static function format(string $value, int $length, string $string, int $type = STR_PAD_RIGHT) : string
+    {
         return str_pad($value, $length, $string, $type);
     }
 }
