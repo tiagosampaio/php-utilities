@@ -16,6 +16,12 @@ jobs:
     - name: Install dependencies
       run: composer install --no-interaction --prefer-dist --no-progress --no-suggest
 
+    - name: Unit Test
+      run: vendor/bin/phpunit dev/test/unit --coverage-html temp/tests/phpunit/coverage
+
+    - name: Code Sniffer
+      run: vendor/bin/phpcs --standard=PSR2 --severity=1 src
+
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
