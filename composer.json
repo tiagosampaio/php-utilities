@@ -2,8 +2,8 @@
     "name": "tiagosampaio/php-utilities",
     "description": "An utility library for ease the development.",
     "type": "library",
-    "keywords": ["sdk", "utilities"],
-    "license": "MIT",
+    "keywords": ["sdk", "utilities", "php"],
+    "license": "OSL-3.0",
     "authors": [
         {
             "name": "Tiago Sampaio",
