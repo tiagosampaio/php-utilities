@@ -37,7 +37,6 @@ class BubbleSort
                     $swapped = true;
                 }
             }
-
         } while ($swapped);
 
         return $data;
