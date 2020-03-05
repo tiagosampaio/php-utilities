@@ -14,20 +14,26 @@ use TiagoSampaio\Sorting\BeadSort as SortingClass;
 class BeadSortTest extends SortAbstract
 {
     /**
-     * @var array
-     */
-    protected $unsortedData = array(3, 2, 5, 4, 1, 100, 35);
-
-    /**
-     * @var array
-     */
-    protected $sortedData = array(100, 35, 5, 4, 3, 2, 1);
-
-    /**
      * @inheritDoc
      */
     protected function getSortingClass() : string
     {
         return SortingClass::class;
+    }
+
+    /**
+     * @return array
+     */
+    protected function getUnsortedList() : array
+    {
+        return $this->unsortedDataPositives;
+    }
+
+    /**
+     * @return array
+     */
+    protected function getSortedList() : array
+    {
+        return array_reverse($this->sortedDataPositives);
     }
 }

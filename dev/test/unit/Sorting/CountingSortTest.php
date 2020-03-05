@@ -18,6 +18,6 @@ class CountingSortTest extends SortAbstract
      */
     public function sort()
     {
-        $this->assertEquals($this->sortedData, SortingClass::sort($this->unsortedData, -1, 5));
+        $this->assertEquals($this->getSortedList(), SortingClass::sort($this->getUnsortedList(), -1, 5));
     }
 }

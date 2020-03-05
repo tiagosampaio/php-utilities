@@ -16,12 +16,12 @@ abstract class SortAbstract extends TestCase
     /**
      * @var array
      */
-    protected $unsortedData = [3, 0, 2, 5, -1, 4, 1];
+    protected $unsorted = [3, 0, 2, 5, -1, 4, 1];
 
     /**
      * @var array
      */
-    protected $sortedData = [-1, 0, 1, 2, 3, 4, 5];
+    protected $sorted = [-1, 0, 1, 2, 3, 4, 5];
 
     /**
      * @var array
@@ -39,7 +39,7 @@ abstract class SortAbstract extends TestCase
      */
     public function sort()
     {
-        $this->assertEquals($this->sortedData, $this->getSortingClass()::sort($this->unsortedData));
+        $this->assertEquals($this->getSortedList(), $this->getSortingClass()::sort($this->getUnsortedList()));
     }
 
     /**
@@ -49,5 +49,21 @@ abstract class SortAbstract extends TestCase
     protected function getSortingClass() : string
     {
         return '';
+    }
+
+    /**
+     * @return array
+     */
+    protected function getUnsortedList() : array
+    {
+        return $this->unsorted;
+    }
+
+    /**
+     * @return array
+     */
+    protected function getSortedList() : array
+    {
+        return $this->sorted;
     }
 }

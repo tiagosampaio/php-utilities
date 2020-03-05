@@ -18,8 +18,8 @@ class RadixSortTest extends SortAbstract
      */
     public function sort()
     {
-        $n = count($this->unsortedDataPositives);
-        $this->assertEquals($this->sortedDataPositives, SortingClass::sort($this->unsortedDataPositives, $n));
+        $n = count($this->getSortedList());
+        $this->assertEquals($this->getSortedList(), SortingClass::sort($this->getUnsortedList(), $n));
     }
 
     /**
@@ -28,5 +28,21 @@ class RadixSortTest extends SortAbstract
     protected function getSortingClass() : string
     {
         return SortingClass::class;
+    }
+
+    /**
+     * @return array
+     */
+    protected function getUnsortedList() : array
+    {
+        return $this->unsortedDataPositives;
+    }
+
+    /**
+     * @return array
+     */
+    protected function getSortedList() : array
+    {
+        return $this->sortedDataPositives;
     }
 }
