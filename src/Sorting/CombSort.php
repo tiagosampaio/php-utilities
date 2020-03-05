@@ -38,15 +38,15 @@ class CombSort
             }
 
             $swap = false;
-            $i = 0;
+            $index = 0;
 
-            while ($i + $gap < count($data)) {
-                if ($data[$i] > $data[$i + $gap]) {
-                    list($data[$i], $data[$i + $gap]) = array($data[$i + $gap], $data[$i]);
+            while ($index + $gap < count($data)) {
+                if ($data[$index] > $data[$index + $gap]) {
+                    list($data[$index], $data[$index + $gap]) = array($data[$index + $gap], $data[$index]);
                     $swap = true;
                 }
 
-                $i++;
+                $index++;
             }
         }
 

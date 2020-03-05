@@ -37,40 +37,39 @@ class RadixSort
 
     /**
      * @param array $data
-     * @param int   $n
+     * @param int   $number
      * @param int   $exp
      *
      * @return array
      */
-    public static function countSort(array $data, int $n, float $exp) : array
+    public static function countSort(array $data, int $number, float $exp) : array
     {
-        $output = array_fill(0, $n, 0); // output array
+        $output = array_fill(0, $number, 0); // output array
         $count = array_fill(0, 10, 0);
 
         // Store count of occurrences in count[]
-        for ($i = 0; $i < $n; $i++) {
-            $count[($data[$i] / $exp) % 10]++;
+        for ($index = 0; $index < $number; $index++) {
+            $count[($data[$index] / $exp) % 10]++;
         }
 
         // Change count[i] so that count[i]
         // now contains actual position of
         // this digit in output[]
-        for ($i = 1; $i < 10; $i++) {
-            $count[$i] += $count[$i - 1];
+        for ($index = 1; $index < 10; $index++) {
+            $count[$index] += $count[$index - 1];
         }
 
         // Build the output array
-        for ($i = $n - 1; $i >= 0; $i--) {
-            $output[$count[ ($data[$i] /
-                $exp) % 10 ] - 1] = $data[$i];
-            $count[ ($data[$i] / $exp) % 10 ]--;
+        for ($index = $number - 1; $index >= 0; $index--) {
+            $output[$count[ ($data[$index] / $exp) % 10 ] - 1] = $data[$index];
+            $count[ ($data[$index] / $exp) % 10 ]--;
         }
 
         // Copy the output array to arr[], so
         // that arr[] now contains sorted numbers
         // according to current digit
-        for ($i = 0; $i < $n; $i++) {
-            $data[$i] = $output[$i];
+        for ($index = 0; $index < $number; $index++) {
+            $data[$index] = $output[$index];
         }
 
         return $data;

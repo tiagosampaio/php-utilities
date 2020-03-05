@@ -22,7 +22,7 @@ class QuickSort
      */
     public static function sort(array $data) : array
     {
-        $loe = $gt = array();
+        $lowerOrEqual = $greaterThan = array();
 
         if (count($data) < 2) {
             return $data;
@@ -31,14 +31,14 @@ class QuickSort
         $pivotKey = key($data);
         $pivot = array_shift($data);
 
-        foreach ($data as $val) {
-            if ($val <= $pivot) {
-                $loe[] = $val;
-            } elseif ($val > $pivot) {
-                $gt[] = $val;
+        foreach ($data as $value) {
+            if ($value <= $pivot) {
+                $lowerOrEqual[] = $value;
+            } elseif ($value > $pivot) {
+                $greaterThan[] = $value;
             }
         }
 
-        return array_merge(self::sort($loe), [$pivotKey => $pivot], self::sort($gt));
+        return array_merge(self::sort($lowerOrEqual), [$pivotKey => $pivot], self::sort($greaterThan));
     }
 }

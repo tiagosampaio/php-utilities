@@ -21,16 +21,16 @@ class SelectionSort
      */
     public static function sort(array $data) : array
     {
-        for ($i = 0; $i < count($data) - 1; $i++) {
-            $min = $i;
+        for ($index = 0; $index < count($data) - 1; $index++) {
+            $min = $index;
 
-            for ($j = $i + 1; $j < count($data); $j++) {
+            for ($j = $index + 1; $j < count($data); $j++) {
                 if ($data[$j] < $data[$min]) {
                     $min = $j;
                 }
             }
 
-            $data = self::swapPositions($data, $i, $min);
+            $data = self::swapPositions($data, $index, $min);
         }
 
         return $data;

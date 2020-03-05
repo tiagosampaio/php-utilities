@@ -34,21 +34,21 @@ class CountingSort
      */
     public static function sort(array $data, int $min, int $max) : array
     {
-        $count = array();
+        $count = [];
 
-        for ($i = $min; $i <= $max; $i++) {
-            $count[$i] = 0;
+        for ($index = $min; $index <= $max; $index++) {
+            $count[$index] = 0;
         }
 
         foreach ($data as $number) {
             $count[$number]++;
         }
 
-        $z = 0;
+        $delta = 0;
 
-        for ($i = $min; $i <= $max; $i++) {
-            while ($count[$i]-- > 0) {
-                $data[$z++] = $i;
+        for ($index = $min; $index <= $max; $index++) {
+            while ($count[$index]-- > 0) {
+                $data[$delta++] = $index;
             }
         }
 

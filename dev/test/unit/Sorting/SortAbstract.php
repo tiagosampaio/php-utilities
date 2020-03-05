@@ -26,12 +26,12 @@ abstract class SortAbstract extends TestCase
     /**
      * @var array
      */
-    protected $unsortedDataPositives = [170, 45, 75, 90, 802, 24, 2, 66];
+    protected $unsortedPositives = [170, 45, 75, 90, 802, 24, 2, 66];
 
     /**
      * @var array
      */
-    protected $sortedDataPositives = [2, 24, 45, 66, 75, 90, 170, 802];
+    protected $sortedPositives = [2, 24, 45, 66, 75, 90, 170, 802];
 
     /**
      * General test for sorting algorithms.

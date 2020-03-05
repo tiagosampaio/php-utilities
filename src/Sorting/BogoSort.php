@@ -38,10 +38,10 @@ class BogoSort
      */
     public static function isSorted(array $data) : bool
     {
-        $cnt = count($data);
+        $count = count($data);
 
-        for ($j = 1; $j < $cnt; $j++) {
-            if ($data[$j - 1] > $data[$j]) {
+        for ($index = 1; $index < $count; $index++) {
+            if ($data[$index - 1] > $data[$index]) {
                 return false;
             }
         }

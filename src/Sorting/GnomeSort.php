@@ -27,20 +27,20 @@ class GnomeSort
      */
     public static function sort(array $data) : array
     {
-        $i = 1;
-        $j = 2;
+        $index = 1;
+        $delta = 2;
 
-        while ($i < count($data)) {
-            if ($data[$i - 1] <= $data[$i]) {
-                $i = $j;
-                $j++;
+        while ($index < count($data)) {
+            if ($data[$index - 1] <= $data[$index]) {
+                $index = $delta;
+                $delta++;
             } else {
-                list($data[$i], $data[$i - 1]) = array($data[$i - 1], $data[$i]);
-                $i--;
+                list($data[$index], $data[$index - 1]) = array($data[$index - 1], $data[$index]);
+                $index--;
 
-                if ($i == 0) {
-                    $i = $j;
-                    $j++;
+                if ($index == 0) {
+                    $index = $delta;
+                    $delta++;
                 }
             }
         }

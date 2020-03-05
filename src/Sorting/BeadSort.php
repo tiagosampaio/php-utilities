@@ -19,8 +19,8 @@ class BeadSort
      */
     public static function sort(array $data) : array
     {
-        foreach ($data as $e) {
-            $poles [] = array_fill(0, $e, 1);
+        foreach ($data as $value) {
+            $poles [] = array_fill(0, $value, 1);
         }
 
         return array_map('count', self::columns(self::columns($poles)));

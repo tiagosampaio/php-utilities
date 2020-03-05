@@ -22,16 +22,16 @@ class InsertionSort
      */
     public static function sort(array $data) : array
     {
-        for ($i = 0; $i < count($data); $i++) {
-            $val = $data[$i];
-            $j = $i - 1;
+        for ($index = 0; $index < count($data); $index++) {
+            $value = $data[$index];
+            $delta = $index - 1;
 
-            while ($j >= 0 && $data[$j] > $val) {
-                $data[$j + 1] = $data[$j];
-                $j--;
+            while ($delta >= 0 && $data[$delta] > $value) {
+                $data[$delta + 1] = $data[$delta];
+                $delta--;
             }
 
-            $data[$j + 1] = $val;
+            $data[$delta + 1] = $value;
         }
 
         return $data;

@@ -30,13 +30,14 @@ class BubbleSort
     {
         do {
             $swapped = false;
-            for ($i = 0, $c = count($data) - 1; $i < $c; $i++) {
-                if ($data[$i] > $data[$i + 1]) {
-                    list($data[$i + 1], $data[$i]) =
-                        array($data[$i], $data[$i + 1]);
+
+            for ($index = 0, $count = count($data) - 1; $index < $count; $index++) {
+                if ($data[$index] > $data[$index + 1]) {
+                    list($data[$index + 1], $data[$index]) = array($data[$index], $data[$index + 1]);
                     $swapped = true;
                 }
             }
+
         } while ($swapped);
 
         return $data;

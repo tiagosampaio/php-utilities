@@ -26,7 +26,7 @@ class BeadSortTest extends SortAbstract
      */
     protected function getUnsortedList() : array
     {
-        return $this->unsortedDataPositives;
+        return $this->unsortedPositives;
     }
 
     /**
@@ -34,6 +34,6 @@ class BeadSortTest extends SortAbstract
      */
     protected function getSortedList() : array
     {
-        return array_reverse($this->sortedDataPositives);
+        return array_reverse($this->sortedPositives);
     }
 }

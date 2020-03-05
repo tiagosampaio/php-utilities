@@ -35,7 +35,7 @@ class RadixSortTest extends SortAbstract
      */
     protected function getUnsortedList() : array
     {
-        return $this->unsortedDataPositives;
+        return $this->unsortedPositives;
     }
 
     /**
@@ -43,6 +43,6 @@ class RadixSortTest extends SortAbstract
      */
     protected function getSortedList() : array
     {
-        return $this->sortedDataPositives;
+        return $this->sortedPositives;
     }
 }
