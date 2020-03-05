@@ -35,7 +35,7 @@ class BeadSort
     {
         if (count($data) == 0) {
             return array();
-        } else if (count($data) == 1) {
+        } elseif (count($data) == 1) {
             return array_chunk($data[0], 1);
         }
 

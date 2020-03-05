@@ -10,7 +10,7 @@ namespace TiagoSampaio\Sorting;
  * Quick sort is a comparison sort, meaning that it can sort items of any type
  * for which a "less-than" relation (formally, a total order) is defined.
  *
- * @see https://www.w3resource.com/php-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-1.php
+ * @see     https://www.w3resource.com/php-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-1.php
  * @package TiagoSampaio\Sorting
  */
 class QuickSort
@@ -34,7 +34,7 @@ class QuickSort
         foreach ($data as $val) {
             if ($val <= $pivot) {
                 $loe[] = $val;
-            } else if ($val > $pivot) {
+            } elseif ($val > $pivot) {
                 $gt[] = $val;
             }
         }

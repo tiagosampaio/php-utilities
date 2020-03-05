@@ -7,7 +7,7 @@ namespace TiagoSampaio\Sorting;
 /**
  * Class RadixSort
  *
- * @see https://www.geeksforgeeks.org/radix-sort/
+ * @see     https://www.geeksforgeeks.org/radix-sort/
  * @package TiagoSampaio\Sorting
  */
 class RadixSort
